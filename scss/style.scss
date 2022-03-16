@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+// Primary Colors
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+
+//Neutral
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+$font-size: 28px;
+
+:root {
+  font-size: $font-size;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: $Dark-Blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px 60px 10px;
+  text-align: center;
+  background-color: $Dark-Grayish-Blue;
+  color: $Light-Cyan;
+  position: relative;
+  border-radius: 0.35rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0.5rem;
+  min-height: 300px;
+  box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.26);
+
+  .accent {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5ch;
+    color: $Neon-Green;
+  }
+
+  .advice {
+    margin-block: 1rem;
+  }
+
+  .btn {
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: $Neon-Green;
+    position: absolute;
+    bottom: -32px;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 20px 1px $Neon-Green;
+  -webkit-box-shadow: 0px 0px 20px 1px $Neon-Green;
+  -moz-box-shadow: 0px 0px 20px 1px $Neon-Green;
+    }
+  }
+
+  @media (min-width: 500px) {
+    & {
+        padding: 40px 25px 60px 25px;
+    }  
+    & > img {
+      content: url("../images/pattern-divider-desktop.svg");
+    }
+  }
+}
